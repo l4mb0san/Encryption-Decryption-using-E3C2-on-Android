@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="vn.edu.uit.lehuutai.tue210317.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/edt_Text"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="150dp"
+        android:text="University of Information Technology"
+        android:textSize="14sp" />
+
+    <Button
+        android:text="Decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_Decrypt"
+        android:layout_alignBaseline="@+id/btn_Encrypt"
+        android:layout_alignBottom="@+id/btn_Encrypt"
+        android:layout_alignEnd="@+id/edt_Text"
+        android:background="@android:drawable/dialog_holo_light_frame" />
+
+    <TextView
+        android:text="Clear Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_ClearTextLabel"
+        android:layout_above="@+id/tv_ClearText"
+        android:layout_alignStart="@+id/tv_CipherTextLabel"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="Encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:id="@+id/btn_Encrypt"
+        android:layout_below="@+id/edt_Text"
+        android:layout_alignStart="@+id/edt_Text"
+        android:background="@android:drawable/dialog_holo_light_frame" />
+
+    <TextView
+        android:text="Cipher Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_CipherTextLabel"
+        android:textColor="@color/colorAccent"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/tv_CipherText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:id="@+id/tv_ClearText"
+        android:scrollbars="vertical"
+        android:background="?android:attr/actionModeSplitBackground"
+        android:textSize="10sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_CipherText"
+        android:layout_height="95dp"
+        android:layout_alignEnd="@+id/tv_CipherText" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:id="@+id/tv_CipherText"
+        android:scrollbars="vertical"
+        android:background="?android:attr/actionModeSplitBackground"
+        android:textSize="10sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="normal|bold"
+        android:layout_height="95dp"
+        android:layout_above="@+id/tv_ClearTextLabel"
+        android:layout_alignStart="@+id/btn_Encrypt"
+        android:layout_marginBottom="11dp"
+        android:layout_alignEnd="@+id/btn_Decrypt" />
+
+    <ImageView
+        android:id="@+id/imgv_lock"
+        android:layout_alignTop="@+id/btn_Decrypt"
+        android:layout_centerHorizontal="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+</RelativeLayout>
